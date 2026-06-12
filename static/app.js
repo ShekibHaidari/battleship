@@ -228,8 +228,8 @@ function connect() {
   ws.onclose = function() {
     $("connText").textContent = "قطع";
     $("connText").classList.remove("on");
+    $("endBox").classList.add("hide");
     showLobby();
-    setMsg("اتصال قطع شد");
   };
 
   ws.onerror = function() {

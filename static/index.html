@@ -8,25 +8,19 @@
 </head>
 <body>
   <div class="box">
-    <h1>بازی نبرد ناوها</h1>
+    <h1>بازی نبرد ناوها </h1>
+    <h1>اسم : احمد شکیب حیدری </h1>
+    <h1>شماره دانشجویی : 40231445 </h1>
     <p class="status-text" id="connText">قطع</p>
 
   <!-- صفحه ورود -->
   <div id="lobby">
-    <p>پروژه برنامه نویسی شبکه - دو نفره</p>
+    <p>پروژه برنامه نویسی شبکه </p>
     <label>آدرس سرور:</label>
     <input type="text" id="serverUrl" value="ws://localhost:8765">
     <button id="connectBtn">اتصال</button>
     <div class="rules">
-      <h3>قوانین</h3>
-      <ul>
-        <li>صفحه ۱۰ در ۱۰ - سطرها A تا J و ستون ها ۱ تا ۱۰</li>
-        <li>۵ کشتی: Carrier(5) Battleship(4) Cruiser(3) Submarine(3) Destroyer(2)</li>
-        <li>بازیکن ۱ اول شلیک می کند</li>
-        <li>اصابت = ۱ امتیاز و نوبت دوباره</li>
-        <li>اولین نفر به ۱۷ امتیاز برنده است</li>
-        <li>علامت ها: &amp; کشتی من | * اصابت حریف | # شلیک من</li>
-      </ul>
+      
     </div>
   </div>
 
@@ -62,11 +56,12 @@
     <div id="shipList"></div>
   </div>
 
+  </div>
+
   <div id="endBox" class="hide">
     <h2 id="endTitle">پایان</h2>
     <p id="endMsg"></p>
     <button id="backBtn">برگشت</button>
-  </div>
   </div>
 
   <script src="app.js"></script>

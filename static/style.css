@@ -138,13 +138,16 @@ button:hover { background: #2244aa; }
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
   z-index: 10;
+}
+#endBox:not(.hide) {
+  display: flex;
 }
 #endBox h2 { font-size: 28px; margin-bottom: 10px; }
 #endBox p { margin-bottom: 15px; }
