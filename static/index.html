@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بازی نبرد ناوها</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h1>بازی نبرد ناوها</h1>
+    <p class="status-text" id="connText">قطع</p>
+
+  <!-- صفحه ورود -->
+  <div id="lobby">
+    <p>پروژه برنامه نویسی شبکه - دو نفره</p>
+    <label>آدرس سرور:</label>
+    <input type="text" id="serverUrl" value="ws://localhost:8765">
+    <button id="connectBtn">اتصال</button>
+    <div class="rules">
+      <h3>قوانین</h3>
+      <ul>
+        <li>صفحه ۱۰ در ۱۰ - سطرها A تا J و ستون ها ۱ تا ۱۰</li>
+        <li>۵ کشتی: Carrier(5) Battleship(4) Cruiser(3) Submarine(3) Destroyer(2)</li>
+        <li>بازیکن ۱ اول شلیک می کند</li>
+        <li>اصابت = ۱ امتیاز و نوبت دوباره</li>
+        <li>اولین نفر به ۱۷ امتیاز برنده است</li>
+        <li>علامت ها: &amp; کشتی من | * اصابت حریف | # شلیک من</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- صفحه بازی -->
+  <div id="game" class="hide">
+    <div class="scores">
+      <div>شما (بازیکن <span id="playerNum">؟</span>): <b id="myScore">0</b> / 17</div>
+      <div id="turnText">...</div>
+      <div>حریف: <b id="oppScore">0</b> / 17</div>
+    </div>
+
+    <div class="msg" id="msgBox">در حال اتصال...</div>
+
+    <div id="placeBar" class="hide">
+      <span>کشتی: <b id="shipName">-</b></span>
+      <button id="rotateBtn">چرخش</button>
+      <button id="clearBtn">پاک کردن</button>
+    </div>
+
+    <div class="boards">
+      <div>
+        <h3>نقشه من</h3>
+        <div class="labels" id="ownLabels"></div>
+        <div class="grid" id="ownGrid"></div>
+      </div>
+      <div>
+        <h3>نقشه حریف</h3>
+        <div class="labels" id="atkLabels"></div>
+        <div class="grid" id="atkGrid"></div>
+      </div>
+    </div>
+
+    <div id="shipList"></div>
+  </div>
+
+  <div id="endBox" class="hide">
+    <h2 id="endTitle">پایان</h2>
+    <p id="endMsg"></p>
+    <button id="backBtn">برگشت</button>
+  </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
